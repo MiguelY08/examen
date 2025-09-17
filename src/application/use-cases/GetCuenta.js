@@ -3,6 +3,6 @@ export default class GetCuenta {
         this.cuentaRepository = cuentaRepository
     }
     async execute(){
-        return await this.cuentaRepository.finAll()
+        return await this.cuentaRepository.findAll()
     }
 }
