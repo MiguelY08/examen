@@ -52,11 +52,7 @@ class CuentaRepository {
   }
 
   async delete(id) {
-    try {
       return await CuentaModel.findByIdAndDelete(id)
-    } catch (error) {
-      throw new Error("Error al eliminar cuenta: " + error.message)
-    }
   }
 }
 
