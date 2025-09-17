@@ -52,8 +52,12 @@ class CuentaRepository {
   }
 
   async delete(id) {
-      return await CuentaModel.findByIdAndDelete(id)
+  const result = await PedidoModel.findByIdAndDelete(id);
+  if (!result) {
+    throw new Error("Pedido no encontrado o ID inválido");
   }
+  return result;
+}
 }
 
 export default CuentaRepository
