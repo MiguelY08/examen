@@ -3,6 +3,6 @@ export default class DeleteCuenta {
         this.cuentaRepository = cuentaRepository
     }
     async execute(id){
-        return await this.cuentaRepository.update(id)            
+        return await this.cuentaRepository.delete(id)            
     }
 }
