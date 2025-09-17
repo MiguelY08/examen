@@ -22,9 +22,9 @@ const CuentaModel = mongoose.model("Cuenta", cuentaSchema)
 
 // Repositorio
 class CuentaRepository {
-  async create(cuentaData) {
+  async create(id) {
     try {
-      const cuenta = new CuentaModel(cuentaData)
+      const cuenta = new CuentaModel(id)
       return await cuenta.save()
     } catch (error) {
       throw new Error("Error al crear cuenta: " + error.message)
